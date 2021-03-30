@@ -1,0 +1,69 @@
+.card {
+    border: 5px double gray;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.col-12 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+#bottom {
+    border: 5px double gray;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #00008B
+    background: #1BD1BA;
+}
+
+#firstjumbo {
+   background: #1BD1BA;
+    background: -moz-linear-gradient(left, #1BD1BA 0%, #088EC4 50%, #04A5C5 100%);
+    background: -webkit-linear-gradient(left, #1BD1BA 0%, #088EC4 50%, #04A5C5 100%);
+    background: linear-gradient(to right, #1BD1BA 0%, #088EC4 50%, #04A5C5 100%);
+    border: 5px double gray;
+    text-decoration: underline;
+}
+
+#prevention {
+    text-decoration: aliceblue;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.lead {
+    text-align: center;
+    text-decoration: white;
+    text-decoration: ;
+    font-style: normal;
+    font-weight: bolder;
+    color: #000080
+}
+
+.display-4 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.accordion-body {
+    background: #52FFC9;
+    background: -moz-linear-gradient(left, #52FFC9 0%, #80E3FF 50%, #08FF78 100%);
+    background: -webkit-linear-gradient(left, #52FFC9 0%, #80E3FF 50%, #08FF78 100%);
+    background: linear-gradient(to right, #52FFC9 0%, #80E3FF 50%, #08FF78 100%);
+}
+}
+
+
+.home {
+    background: #1BD1BA;
+    /*/* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+*/
