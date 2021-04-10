@@ -1,1 +1,1 @@
-This is a collection of the various projects I have completed in my journey into the world of data analytics and visualization. The projects span the spectrum of analytical topics using data, such as postgrSQL, ETL, Tableau, Machine Learning, Python, Pandas, Jupyter Notebook.
+This is a collection of the various projects I have completed in my journey into the world of data analytics and visualization. The projects span the spectrum of analytical topics using data, such as SQL, postgrSQL, ETL, Tableau, Machine Learning, Python, Pandas, Jupyter Notebook.
