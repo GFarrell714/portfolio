@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+
+    <title>Diabetes Assessment</title>
+</head>
+
+<body class="home">
+    <div id="firstjumbo" class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h2 class="display-4"><u>Diabetes and You</u></h2>
+            <h3 style="text-align: center;" class="lead"><u><em>Are you at risk for developing diabetes?</em></u></h3>
+            <h3 style="text-align: center;" class="lead"><u><em>This assessment pertains to type 1 & 2 diabetes only, it does apply to Gestational Diabetes (Occuring During Pregnancy).</em></u> </h3>
+            <h3 style="text-align: center;" class="lead"><u><em>Answer the questionaire below. If a particular question does not apply to you, switch the answer from "Yes" to "NO"</em></u></h3> 
+        	<!	--h4 Go through the list of questions below and hit submit upon completion (questions are assumed to be "Yes" unless caregiver or patient changes them).
+        </div>
+    </div>
+
+    <div class="jumbotron jumbotron-fluid" style="border: 10px double gray">
+        <form action="{{ url_for("predict")}}" method="post">
+            <div class="row">
+                <div class="col-3">
+                    <label for="Gender"><strong>Gender</strong>:</label>
+                    <select name="Gender" class="form-select" aria-label="Default select example">
+                                        <option value="1">Male</option>
+                                        <option value="0">Female</option>
+                                    </select>
+                                    <br>
+                    <label for="Polyuria"><strong>Frequent Urination</strong>:</label>
+                    <select name="Polyuria" class="form-select" aria-label="Default select example">
+                                        <option value="1">Yes</option>
+                                        <option value="0">No</option>
+                                    </select>
+                                    <br>
+                    <label for="Polydipsia"><strong>Excessive Thirst</strong>:</label>
+                    <select name="Polydipsia" class="form-select" aria-label="Default select example">
+                                        <option value="1">Yes</option>
+                                        <option value="0">No</option>
+                                    </select>
+                                    <br>
+                    <label for="Sudden Weight Loss"><strong>Sudden Weight Loss</strong>:</label>
+                    <select name="Sudden Weight Loss" class="form-select" aria-label="Default select example">
+                                        <option value="1">Yes</option>
+                                        <option value="0">No</option>
+                                    </select>
+                </div>
+                <div class="col-3">
+                    <label for="Weakness"><strong>Weakness</strong>:</label>
+                    <select name="Weakness" class="form-select" aria-label="Default select example">
+                                        <option value="1">Yes</option>
+                                        <option value="0">No</option>
+                                    </select>
+                                    <br>
+                    <label for="Polyphagia"><strong>Excessive Hunger</strong>:</label>
+                    <select name="Polyphagia" class="form-select" aria-label="Default select example">
+                                        <option value="1">Yes</option>
+                                        <option value="0">No</option>
+                                    </select>
+                                    <br>
+                    <label for="Genital Thrush"><strong>Recent Fungal Infection</strong>:</label>
+                    <select name="Genital Thrush" class="form-select" aria-label="Default select example">
+                                        <option value="1">Yes</option>
+                                        <option value="0">No</option>
+                                    </select>
+                                    <br>
+                    <label for="Visual Blurring"><strong>Blurry Vision</strong>:</label>
+                    <select name="Visual Blurring" class="form-select" aria-label="Default select example">
+                                        <option value="1">Yes</option>
+                                        <option value="0">No</option>
+                                    </select>
+                                    <br>
+                </div>
+                <div class="col-3">
+                    <label for="Itching"><strong>Itchy Skin:</strong></label>
+                    <select name="Itching" class="form-select" aria-label="Default select example">
+                                        <option value="1">Yes</option>
+                                        <option value="0">No</option>
+                                    </select>
+                                    <br>
+                    <label for="Irritability"><strong>Irritability</strong>:</label>
+                    <select name="Irritability" class="form-select" aria-label="Default select example">
+                                        <option value="1">Yes</option>
+                                        <option value="0">No</option>
+                                    </select>
+                                    <br>
+                    <label for="Delayed Healing"><strong>Delayed Healing</strong>:</label>
+                    <select name="Delayed Healing" class="form-select" aria-label="Default select example">
+                                        <option value="1">Yes</option>
+                                        <option value="0">No</option>
+                                    </select>
+                                    <br>
+                    <label for="Partial Paresis"><strong>Weaknes and/or Tingling Feeling (Arms & Legs)</strong>:</label>
+                    <select name="Partial Paresis" class="form-select" aria-label="Default select example">
+                                        <option value="1">Yes</option>
+                                        <option value="0">No</option>
+                                    </select>
+                                    <br>
+                </div>
+                <div class="col-3">
+                    <label for="Muscle Stiffness"><strong>Muscle Stiffness</strong>:</label>
+                    <select name="Muscle Stiffness" class="form-select" aria-label="Default select example">
+                                        <option value="1">Yes</option>
+                                        <option value="0">No</option>
+                                    </select>
+                                    <br>
+                    <label for="Alopecia"><strong>Sudden Unexplained Hair Loss</strong>:</label>
+                    <select name="Alopecia" class="form-select" aria-label="Default select example">
+                                        <option value="1">Yes</option>
+                                        <option value="0">No</option>
+                                    </select>
+                                    <br>
+                    <label for="Obesity"><strong>Obesity Present</strong>:</label>
+                    <select name="Obesity" class="form-select" aria-label="Default select example">
+                                        <option value="1">Yes</option>
+                                        <option value="0">No</option>
+                                    </select>
+                                    <br>
+                                    <br>
+                    <label for="Age"><strong>Age</strong>:</label>
+                    <input type="number" id="Age" name="Age">
+                    <input type="submit" value="Submit">
+                    <br>
+            
+                    </select>
+                    
+
+                </div>
+                
+                <!--div class="col-12"
+                    <label for="Age"><strong>Age</strong>:</label>
+                    <input type="number" id="Age" name="Age">
+                    <input type="submit" value="Submit"-->
+                    
+                </div>
+                <br>
+        
+                <div class="col-12" id="pred">
+                    <h3 style="text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18, 2px 2px 2px rgba(206,89,55,0);
+                        color: #FF0082;"><u>{{ pred }}</u></h3>
+                </div>
+            </div>
+        </form>
+    </div>
+    <br>
+    <h3 class="prevention" style="text-align: center;">Preventing Diabetes</h3>
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 style="color:MidnightBlue;" style="text-align: center;" class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Diet
+      </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <ul>
+                        <li>Data shows that diets, rich in whole grains, help protect against diabetes</li>
+                        <ul>
+                        <li>"Women who averaged 2-3 servings of whole grains a day were 30% less likely to have developed type 2 diabetes than those who rarely ate whole grains."</li>
+                        <li>When the researchers combined these results with those of several other large studies, they found that eating an extra two servings of whole grains a day decreased the risk of type 2 diabetes by 21%.</li>
+                        
+                        </ul>
+                    </ul>  
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Phyiscal Activity
+      </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <ul>
+                        <li>
+                            The ADA website state:
+                            <ul>
+                                <li>
+                                    Losing 7-10% of your current weight can cut your chances of developing type 2 diabetes in half.
+                                </li>
+                                <li>
+                                    This puts less stress on your insulin-making cells. So trade some of your sit-time for fit-time.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+      </button>
+       <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Helpful links
+      </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <ul>
+                         <li><a href="https://www.diabetes.org/">American Diabetes Association</a></li>
+                        <li><a href="https://www.diabetes.org/advocacy">Diabetes Advocate</a></li>
+                        <li><a href="https://www.diabetes.org/resources/statistics">Diabetes Stats</a></li>
+                           
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+      </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    
+                </div>
+            </div>
+    <footer id="bottom">
+        <div class="container">
+            <div class="row ">
+                <div class="py-0">
+                    <h4 class="my-4 text-black">Machine Learning Project</h4>
+                    
+                    <br>
+                    <p  class="participants text-black">UCI Data Analytics - Machine Learning Project</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end of footer -->
+
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+<script src="/static/app.js"></script>
+
+</html>
