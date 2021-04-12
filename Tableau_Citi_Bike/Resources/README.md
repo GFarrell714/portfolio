@@ -6,3 +6,6 @@ bike-share organiiztion is only utilized in the upper-class, high-society region
 this company is truly servicing, but rather on those individuals who are excluded from the benefits affored by this "nobel" start-up. To summarize the findings 
 of the data analyzed, I leave you with this - If you can visualize these maps, and appreciate the insight they provife, then you clearly are not blind to the 
 caste-like system that this service and activity perpetuates.
+
+The data visualization that was created using Tableau can be found at the following link:
+https://public.tableau.com/profile/geoff.farrell#!/vizhome/MostPopularStartEndStations-2019vs2020_twbx/MostPpularstartEndStations-2019vs_2020
