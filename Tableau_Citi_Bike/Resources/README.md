@@ -8,4 +8,4 @@ of the data analyzed, I leave you with this - If you can visualize these maps, a
 caste-like system that this service and activity perpetuates.
 
 The data visualization that was created using Tableau can be found at the following link:
-https://public.tableau.com/profile/geoff.farrell#!/vizhome/MostPopularStartEndStations-2019vs2020_twbx/MostPpularstartEndStations-2019vs_2020
+https://public.tableau.com/profile/geoff.farrell#!/vizhome/
